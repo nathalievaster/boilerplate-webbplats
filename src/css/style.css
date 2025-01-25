@@ -1,16 +1,30 @@
+body {
+    background-color: #fee8e6;
+}
 /* Style för menyn */
-header nav ul {
+header {
+    background-color: #432E54;
+    padding: 3em;
     display: flex;
-    /* Gör listan horisontell */
-    list-style: none;
-    /* Ingen punktlista */
-    padding: 0;
-    gap: 2em;
-    /* Mellanrum mellan länkar */
+    align-items: center; /* Vertikal centrering */
+    justify-content: space-between; /* Dela upp utrymmet mellan rubrik och länkar */
 }
 
+header h1 {
+    color:#fee8e6;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 2em;
+    margin: 0; /* Säkerställ att ul inte har marginaler */
+}
+
+
 header nav ul li a {
-    color: #FB63B4;
+    color: #fee8e6;
     text-decoration: none;
     /* Ta bort understrykning */
     font-weight: bold;
@@ -41,10 +55,14 @@ header nav ul li a.active {
         align-items: center;
     }
 
+    header h1{
+        padding: 1em;
+    }
+
     .menu-btn {
         display: flex;
         align-items: center;
-        background-color: #FB63B4;
+        background-color:#fee8e6;
         padding: 8px 15px;
         border: black solid 2px;
         cursor: pointer;
@@ -105,7 +123,7 @@ header nav ul li a.active {
         /* Menyn tar upp 50% av bredden */
         height: 100%;
         /* Menyn tar upp hela höjden */
-        background-color: #032240;
+        background-color:#432E54;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -142,5 +160,78 @@ header nav ul li a.active {
     #nav-menu ul li a:hover {
         color: #FB63B4;
         text-decoration: underline;
+    }
+}
+
+
+.pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+}
+
+.pictures h2 {
+    position: relative;
+    grid-column: span 3; /* Gör så att rubriken inte är en del av grid-en */
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #333333;
+    z-index: 2; /* Placera den ovanför grid */
+
+}
+
+/* Stil för figure och figcaption */
+figure {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil för figcaption */
+figcaption {
+    font-weight: bold;
+    font-size: 1.7em;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Stil för bilder */
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsiv design: se till att bilderna ska vara anpassningsbara på mobila enheter */
+@media (max-width: 768px) {
+    .pictures {
+        grid-template-columns: 1fr; /* En kolumn */
+        gap: 20px; /* Mellanrum mellan varje rad */
+    }
+    
+    .pictures h2 {
+        grid-column: 1 / -1; /* Sträck ut rubriken över hela bredden */
+        font-size: 1.8em;
+    }
+
+    figure {
+        margin: 0 auto; /* Centrera varje figure */
+        max-width: 90%; /* Gör att figuren inte tar upp hela skärmbredden */
     }
 }
