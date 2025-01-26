@@ -163,6 +163,14 @@ header nav ul li a.active {
     }
 }
 
+.index-text {
+    max-width: 800px;
+    padding: 1em;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
 
 .pictures {
     display: grid;
