@@ -163,12 +163,16 @@ header nav ul li a.active {
     }
 }
 
-.index-text {
+.index-text,
+.process {
     max-width: 800px;
-    padding: 1em;
-    margin: 0 auto;
+    padding: 1.6em;
+    margin: 1em auto;
     font-size: 1.1em;
     line-height: 1.5em;
+    border-radius: 8px; /* Rundade hörn för en mjukare look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Skugga för att ge djup */
+
 }
 
 
@@ -242,4 +246,13 @@ figure img:hover {
         margin: 0 auto; /* Centrera varje figure */
         max-width: 90%; /* Gör att figuren inte tar upp hela skärmbredden */
     }
+}
+
+footer {
+    background-color: #432E54;
+    padding: 0.8em;
+    margin-top: 1.5em;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
 }
