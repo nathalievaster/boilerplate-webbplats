@@ -14,6 +14,11 @@ header h1 {
     color:#fee8e6;
 }
 
+h1 a {
+    text-decoration: none;  /* Tar bort understrykning */
+    color: inherit;         /* Ärver färgen från förälderelementet (h1) */
+}
+
 header nav ul {
     display: flex;
     list-style: none;
